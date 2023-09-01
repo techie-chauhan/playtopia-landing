@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from '../components/about/Hero.astro'
+import Story from '../components/about/Story.astro'
+import MissionVision from '../components/about/MissionVision.astro'
+import CoreValues from '../components/about/CoreValues.astro'
+import OurTeam from '../components/about/Team.astro'
+import WhatWeOffer from '../components/index/WhatWeOffer.astro'
+import PlaytopiaCafe from '../components/index/PlaytopiaCafe.astro'
+import AmenitiesAndActivities from '../components/index/AmenitiesAndActivities.astro'
+import Testimonials from '../components/index/Testimonials.astro'
+import ContactSection from '../components/ContactSection.astro'
+---
+<Layout title="What is playtopia" description='description for playtopia' pageOgType='website' currentTab={2}>
+    <Hero />
+
+    <Story />
+
+    <MissionVision />
+
+    <CoreValues />
+
+    <OurTeam />
+
+    <WhatWeOffer />
+
+    <PlaytopiaCafe />
+
+    <AmenitiesAndActivities />
+
+    <Testimonials />
+
+    <ContactSection />
+
+</Layout>
+<link
+	  rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline>
+    new Swiper('.testimonialSwiper', {
+            // Optional parameters
+            // loop: true,
+            // autoplay: {
+            //     delay: 2000,
+            //     disableOnInteraction: false,
+            // },
+            // slidesPerView: 1,
+            spaceBetween: 30,
+
+            // If we need pagination
+            pagination: {
+              el: '#tS-pagi',
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+        });
+</script>

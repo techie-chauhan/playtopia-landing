@@ -1,0 +1,22 @@
+---
+interface Props {
+    text: string,
+    isPurple?: boolean
+}
+const {text, isPurple} = Astro.props
+---
+<section id="brief" class="relative w-full flex justify-center px-5 md:px-10 mt-20 md:mt-16 ">
+
+    <!-- container -->
+    <div class={`relative w-full max-w-custom1 py-10 px-10 ${isPurple? "bg-mPurple-400" :"bg-mYellow-400"} rounded-2xl overflow-hidden flex flex-col items-center`}>
+        <!-- pattern -->
+        <div class="absolute top-0 left-0 w-full h-full bg-150p md:bg-50p" style="background-image: url(/svg/patterns/damascus-animate.svg);">
+            <!-- <img src="public/svg/patterns/damascus-animate.svg" style="" alt=""> -->
+        </div>
+
+        <p class={`w-full max-w-lg text-center /my-5 font-bold text-lg z-10 ${isPurple ? "text-white" : "" }`}>
+            {text}
+        </p>
+    </div>
+
+</section>

@@ -1,0 +1,54 @@
+---
+interface Props {
+    title: string,
+    description: string,
+    cardList: Array<{
+        alt: string,
+        image: string
+    }>
+}
+const {title, description, cardList} = Astro.props;
+
+---
+<section class="relative w-full flex justify-center px-5 md:px-10 mt-20 md:mt-16">
+
+    <!-- container -->
+    <div class="relative w-full max-w-custom1 border-4 rounded-xl bg-white bg-opacity-70 backdrop-blur   md:px-7">
+
+        <div class={`justify-between flex flex-col py-10 md:py-16`}>
+
+            <!-- text container -->
+            <div class={`relative LeftCont w-full /max-w-xl px-5 md:px-0 mb-10 flex flex-col items-start justify-center space-y-5`}>
+
+                <!-- <div class="w-[70%] md:w-72">
+                    <img src="/svg/brand/playtopiaLogo.svg" alt="">
+                </div> -->
+
+                <div class="flex flex-col space-y-2">
+                    <h1>{title}</h1>
+                    <!-- <span class="subheading">Unleash Smiles and Adventure</span> -->
+                </div>
+
+                <p class="w-full max-w-lg">
+                    {description}
+                </p>
+                <a href="#" class="ctaBtn">Book Now</a>
+
+            </div>
+
+            <!-- cardContainer -->
+            <div class="w-full grid grid-cols-2 md:grid-cols-5 gap-5">
+
+                {cardList.map((item, index) => (
+                    <div class={`flex flex-col items-center ${index%2 ? "bg-mPink-400 text-white" : "bg-mYellow-400"} rounded-md`}>
+                        <img src={item.image} alt={item.alt} class="w-full aspect-square rounded-md border">
+                    </div>
+                ))}
+
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

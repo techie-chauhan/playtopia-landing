@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TopBrief from '../../components/reusable/TopBrief.astro'
+import SideCard from '../../components/reusable/SideCard.astro'
+import CenterCardGrid from '../../components/reusable/CenterCardGrid.astro'
+import ContactSection from "../../components/ContactSection.astro";
+
+---
+
+<Layout title="Activities | Playtopia" description='description for playtopia' pageOgType="website" currentTab={3}>
+
+    <TopBrief
+        title="Activities"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+    />
+
+    <SideCard
+        title="Top Activities"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+        ]}
+    />
+
+    <SideCard
+        title="Child Choice"
+        cardSideLeft={true}
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+        ]}
+    />
+
+    <CenterCardGrid
+        title="All Activities"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                title: "card1 name",
+                description: "card description"
+            },
+        ]}
+    />
+
+    <ContactSection />
+</Layout>

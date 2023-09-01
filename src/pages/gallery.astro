@@ -1,0 +1,162 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopBrief from '../components/reusable/TopBrief.astro'
+import SideImageCard from '../components/reusable/SideImageCard.astro'
+import CenterImageCardGrid from '../components/reusable/CenterImageCardGrid.astro'
+import ContactSection from "../components/ContactSection.astro";
+
+---
+
+<Layout title="Gallery | Playtopia" description='description for playtopia' pageOgType="website" currentTab={5}>
+
+    <TopBrief
+        title="Gallery"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+    />
+
+    <SideImageCard
+        title="Fun Memories"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+        ]}
+    />
+
+    <SideImageCard
+        title="Special Memories"
+        cardSideLeft={true}
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+        ]}
+    />
+
+    <SideImageCard
+        title="Crazy Memories"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+        ]}
+    />
+
+    <CenterImageCardGrid
+        title="See All Of Them"
+        description="Playtopia is a vibrant wonderland designed to ignite your child's imagination and thrill their senses. With a diverse range of activities and attractions, we create a haven where laughter, learning, and unforgettable moments come to life."
+        cardList={[
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+            {
+                image: '/img/hero-banner-2.jpg',
+                alt: "card1 name",
+                
+            },
+        ]}
+    />
+
+    <ContactSection />
+</Layout>

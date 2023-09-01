@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --swiper-theme-color: #78D4D7 !important;
+    --swiper-navigation-size: 30px !important;
+}
+* {
+    /* @apply font-Quicksand */
+}
+h1,h2,h3,h4,h5,h6 {
+    @apply font-Comic
+}
+h1 {
+    @apply text-4xl md:text-5xl font-semibold;
+}
+h1 span.high {
+    @apply underline decoration-4 font-normal
+}
+h2 {
+    @apply text-3xl md:text-4xl font-normal font-Grandstander
+}
+h2 span.high {
+    @apply underline decoration-[3px]
+}
+h3 {
+    @apply text-xl md:text-4xl font-semibold
+}
+h4 {
+    @apply text-lg md:text-xl font-semibold
+}
+span.subheading {
+    @apply relative text-black md:text-mCyan-400 font-bold mb-2
+}
+span.subheading.txtWhite {
+    @apply relative text-white font-bold mb-2
+}
+span.subheading.heroS {
+    @apply mb-0
+}
+span.subheading-gold {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply font-semibold text-lg;
+}
+span.subheading-lightBg {
+    @apply font-bold text-black;
+}
+
+main {
+    @apply mt-0
+}
+
+main.stickyApplied {
+    @apply mt-40 md:mt-20
+}
+
+.backdrop-size {
+    background-size: 70%;
+}
+@media screen and (max-width: 768px) {
+    .backdrop-size {
+        background-size: 150%;
+    }
+}
+
+
+
+/* header */
+ul.deskMenu .deskMenuItemCont {
+    @apply w-full flex h-full
+}
+ul.deskMenu .deskMenuItemCont .deskMenuItem {
+    @apply border-4 w-full h-full flex justify-center items-center border-b-0 border-mCyan-400 rounded-t-xl py-3 font-bold bg-white hover:bg-mCyan-400 transition-all
+}
+ul.deskMenu .deskMenuItemCont:nth-child(even) .deskMenuItem {
+    @apply border-mPurple-400 hover:bg-mPurple-400 hover:text-white
+}
+ul.deskMenu .deskMenuItemCont:nth-child(3n) .deskMenuItem {
+    @apply border-mYellow-400 hover:bg-mYellow-400
+}
+ul.deskMenu .deskMenuItemCont:nth-child(4n) .deskMenuItem {
+    @apply border-mPink-400 hover:bg-mPink-400 hover:text-white
+}
+ul.deskMenu .deskMenuItemCont:last-child .deskMenuItem {
+    @apply border-r-4
+}
+ul.deskMenu .deskMenuItemCont .deskMenuItem.active {
+    @apply bg-mCyan-400
+}
+ul.deskMenu .deskMenuItemCont:nth-child(even) .deskMenuItem.active {
+    @apply bg-mPurple-400 text-white
+}
+ul.deskMenu .deskMenuItemCont:nth-child(3n) .deskMenuItem.active {
+    @apply bg-mYellow-400
+}
+ul.deskMenu .deskMenuItemCont:nth-child(4n) .deskMenuItem.active {
+    @apply bg-mPink-400 text-white
+}
+
+
+.HeroSwiper .swiper-slide {
+    @apply relative w-full h-full overflow-hidden
+}
+.HeroSwiper .swiper-slide .LeftCont {
+    @apply relative -translate-x-full transition-all duration-500 delay-500 px-5 md:px-0
+}
+.HeroSwiper .swiper-slide .RightCont {
+    @apply absolute md:relative 
+    top-0 md:top-auto 
+    left-0 md:left-auto 
+    w-full h-full md:w-auto md:h-auto 
+    -z-10 md:z-auto translate-x-full transition-all duration-500 delay-500
+}
+.HeroSwiper .swiper-slide .RightCont::after,
+#hero .RightCont::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    @apply bg-white bg-opacity-70 rounded-lg md:hidden
+}
+
+.HeroSwiper .swiper-slide.swiper-slide-active .LeftCont {
+    @apply -translate-x-0
+}
+.HeroSwiper .swiper-slide.swiper-slide-active .RightCont {
+    @apply translate-x-0
+}
+#hero .swiper-slide a {
+    @apply relative bg-mPink-400 text-white px-5 py-2 rounded
+}
+a.ctaBtn {
+    @apply relative bg-mPink-400 text-white px-5 py-2 rounded
+}
+
+
+
+.activityGrid li a {
+    @apply w-full flex justify-center items-center text-center py-3 px-4 border-[3px] border-mYellow-400 hover:bg-mYellow-400 rounded-md font-bold bg-white
+}
+.activityGrid li:nth-child(even) a {
+    @apply border-mPurple-400 hover:bg-mPurple-400 hover:text-white
+}
+
+
+
+
+.testimonialSwiper .swiper-wrapper .swiper-slide {
+    @apply relative border-[3px] rounded-md border-mPink-400 p-5 overflow-hidden flex flex-col bg-white bg-opacity-80
+}
+.testimonialSwiper .swiper-wrapper .swiper-slide p {
+    @apply text-left w-full
+}
+.testimonialSwiper .swiper-wrapper .swiper-slide span {
+    @apply self-end
+}
+
+
+/* ============================== */
+/* about page */
+/* ============================== */
+
+/* core values */
+#core-values .grid-item {
+    @apply border-4 border-mYellow-400 rounded-xl p-5
+}
+
+
+
+
+
+
+
+
+
+
+
+.gold-text {
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg-gold {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+
+
+/* line-clamp */
+
+/* @layer components {
+	.line-clamp-auto {
+		-webkit-line-clamp: "auto";
+	}
+	.line-clamp-1 {
+		-webkit-line-clamp: 1;
+	}
+	.line-clamp-2 {
+		-webkit-line-clamp: 2;
+	}
+	.line-clamp-3 {
+		-webkit-line-clamp: 3;
+	}
+} */
+
+
+
+.animate-slow-spin {
+    animation: newSpin 3s linear infinite;
+}
+/* vari keyframe */
+
+@keyframes newSpin {
+    from {
+        @apply rotate-0
+    }
+    to {
+        @apply rotate-[360deg]
+    }
+}

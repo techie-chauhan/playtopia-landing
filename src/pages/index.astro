@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Hero from '../components/index/Hero.astro'
+import Quote from '../components/index/Quote.astro'
+import WhyUs from '../components/index/WhyUs.astro'
+import WhatWeOffer from '../components/index/WhatWeOffer.astro'
+import PlaytopiaCafe from '../components/index/PlaytopiaCafe.astro'
+import AmenitiesAndActivities from '../components/index/AmenitiesAndActivities.astro'
+import Testimonials from '../components/index/Testimonials.astro'
+import ContactSection from '../components/ContactSection.astro'
+---
+
+<Layout title="Playtopia" description='description for playtopia' pageOgType='website' currentTab={1}>
+	<Hero />
+
+	<Quote text='PlayTopia is a playschool that believes in the power of play. We offer a safe and nurturing environment where children can explore, learn, and grow.'/>
+	
+	<WhyUs />
+	
+	<WhatWeOffer />
+	
+	<PlaytopiaCafe />
+	
+	<AmenitiesAndActivities />
+	
+	<Quote text='A safe and nurturing environment where children can explore their imaginations and become lifelong learners.' isPurple={true}/>
+
+	<Testimonials />
+
+	<ContactSection />
+
+</Layout>
+<link
+	  rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline>
+	new Swiper('.HeroSwiper', {
+            // Optional parameters
+            loop: true,
+            autoplay: {
+                delay: 5500,
+                disableOnInteraction: false,
+            },
+
+            // If we need pagination
+            pagination: {
+              el: '#hS-pagi',
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.HeroSwiper-button-next',
+              prevEl: '.HeroSwiper-button-prev',
+            },
+          
+            // And if we need scrollbar
+    });
+    new Swiper('.testimonialSwiper', {
+            // Optional parameters
+            // loop: true,
+            // autoplay: {
+            //     delay: 2000,
+            //     disableOnInteraction: false,
+            // },
+            // slidesPerView: 1,
+            spaceBetween: 30,
+
+            // If we need pagination
+            pagination: {
+              el: '#tS-pagi',
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+        });
+</script>

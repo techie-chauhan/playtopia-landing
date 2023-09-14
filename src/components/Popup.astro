@@ -26,7 +26,7 @@ const max = year+"-"+month+"-"+(day+30)
 
             <div class="">
 
-                <button style="
+                <button onclick="closePopUp()" style="
                     position: absolute;
                     top: 25px;
                     right: 30px;
@@ -34,7 +34,8 @@ const max = year+"-"+month+"-"+(day+30)
                     width: 35px;
                     height: 35px;
                     border-radius: 50px;
-                " onclick="closePopUp()">
+                    z-index: 100;
+                ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor"
                         style="width: 30px; height: 30px; color: #121212; position: absolute; top:50%;left:50%;transform:translate(-50%,-50%)">

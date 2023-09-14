@@ -1,3 +1,23 @@
+---
+const data = [
+    {
+        para: "Playtopia made my son's birthday party unforgettable! From the donut slide to the trampoline, the kids had a blast.",
+        name: "Sushil"
+    },
+    {
+        para: "Our family outings to Playtopia are always a hit. The staff is friendly, the place is clean, and there's so much for the kids to do.",
+        name: "Ajay Sharma"
+    },
+    {
+        para: "As a parent, safety is paramount. Playtopia's attention to safety measures put my mind at ease.",
+        name: "Rahul Rohila"
+    },
+    {
+        para: "Playtopia is not just a playcenter; it's a place where my kids' imaginations come to life. The Pretend Play area is a favorite",
+        name: "Ambika Chauhan"
+    },
+]
+---
 <section id="testimony" class="relative w-full flex justify-center px-5 md:px-10 mt-10 md:mt-16">
 
     <!-- container -->
@@ -6,7 +26,7 @@
         <!-- heading text -->
         <div class="py-7 md:py-14">
             <span class="subheading">testimonials</span>
-            <h2>Customer Feedbacks</h2>
+            <h2>What Our Guests Say?</h2>
         </div>
         <div class="relative w-full h-full text-center md:col-start-2 md:col-end-6 text-lg font-semibold /rounded /bg-gray-400 pb-5 md:py-10">
             <!-- Slider main container -->
@@ -14,22 +34,14 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper md:pl-10">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <p>It's really wonderful. The best on the net! It's really wonderful.</p>
-                        <span>~Sushil</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>It's really wonderful. The best on the net! It's really wonderful.</p>
-                        <span>~Sushil b</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>It's really wonderful. The best on the net! It's really wonderful.</p>
-                        <span>~Sushil c</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>It's really wonderful. The best on the net! It's really wonderful.</p>
-                        <span>~Sushil d</span>
-                    </div>
+                    {data.map((item, index) => (
+
+                        <div class="swiper-slide">
+                            <p>{item.para}</p>
+                            <span>~{item.name}</span>
+                        </div>
+
+                    ))}
                 </div>
                 <!-- If we need pagination -->
                 <div id="tS-pagei" class="swiper-pagination "></div>

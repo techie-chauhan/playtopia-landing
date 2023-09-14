@@ -1,3 +1,26 @@
+---
+const data = {
+    subheading: "About Us",
+    heading: [
+        {
+            type: 0,
+            text: "Learn About "
+        },
+        {
+            type: 1,
+            text: "Playful"
+        },
+        {
+            type: 0,
+            text: " Our Journey"
+        }
+    ],
+    para: `At Playtopia, we trust that every infant merits a paranormal and memorable birthday celebration. With years of experience in setting up kids' events, we've ended up professionals in turning ordinary moments into extremely good reminiscences. Our crew is captivated by developing captivating reviews that leave youngsters and parents smiling from ear to ear.
+
+            Our undertaking is easy: to take the pressure out of celebration planning even as ensuring that your infant's special day is not anything brief or mind-blowing. We recognize that every toddler is precise, which is why we tailor our events to suit their pursuits, whether or not it's a princess tea birthday party, a superhero journey, a thrilling pirate voyage, or any other topic your toddler can dream up.
+        `
+}
+---
 <section id="whatWeOffer" class="relative w-full flex justify-center px-5 md:px-10 mt-20 md:mt-16">
 
     <!-- container -->
@@ -5,8 +28,33 @@
         
         <!-- mob heading -->
         <div class="w-full flex flex-col md:hidden items-center text-center mb-10">
-            <span class="subheading">what we offer</span>
-            <h2 class="w-full max-w-lg">What Does <span class="high decoration-mYellow-400">PlayTopia Offer</span> to Justify your ward coming here</h2>
+            <span class="subheading">{data.subheading}</span>
+            <h2 class="w-full max-w-lg">
+                {
+                    data.heading.map((item, index) => {
+                        switch (item.type) {
+                            case 0:
+                                return (
+                                    <span>
+                                        {item.text}
+                                    </span>
+                                )
+                                break;
+
+                            case 1:
+                                return (
+                                    <span class="high decoration-mYellow-400">
+                                        {item.text}
+                                    </span>
+                                )
+                                break;
+                        
+                            default:
+                                break;
+                        }
+                    })
+                }
+            </h2>
         </div>
         
         <!-- img -->
@@ -25,12 +73,59 @@
         </div>
 
         <!-- txt -->
-        <div class="w-full h-full flex flex-col justify-center">
-            <span class="hidden md:block subheading">what we offer</span>
-            <h2 class="hidden md:block w-full max-w-lg">What Does <span class="high decoration-mYellow-400">PlayTopia Offer</span> to Justify your ward coming here</h2>
+        <div class="w-full h-full flex flex-col justify-center items-start py-10">
+            <span class="hidden md:block subheading">{data.subheading}</span>
+            <h2 class="hidden md:block w-full max-w-lg">
+                {
+                    data.heading.map((item, index) => {
+                        switch (item.type) {
+                            case 0:
+                                return (
+                                    <span>
+                                        {item.text}
+                                    </span>
+                                )
+                                break;
 
-            <p class="w-full max-w-lg mt-5">PlayTopia offers a variety of programs and activities that help children learn and grow through play. We believe that play is the most natural way for children to learn, and we provide a safe and nurturing environment where children can explore their imaginations, develop their social and emotional skills, and make lifelong friends.</p>
+                            case 1:
+                                return (
+                                    <span class="high decoration-mYellow-400">
+                                        {item.text}
+                                    </span>
+                                )
+                                break;
+                        
+                            default:
+                                break;
+                        }
+                    })
+                }
+            </h2>
+
+            <p class="w-full max-w-lg mt-5" style="display: block; -webkit-box-orient: vertical; display: -webkit-box; overflow: hidden; text-overflow: ellipsis;-webkit-line-clamp: 4;">{data.para}</p>
+            <button onclick="toggleElipsisText4L(event)" class="underline">read more</button>
+            <button onclick="openPopUp()" class="bg-mPink-400 text-white px-4 py-2 rounded mt-3 hover:opacity-60">Contact Us</button>
         </div>
     </div>
 
 </section>
+<script is:inline>
+    function toggleElipsisText4L(event) {
+        for (let i = 0; i < event.target.parentElement.children.length; i++) {
+            const para = event.target.parentElement.children[i];
+            if (para.localName == "p") {
+                
+                // const para = event.target.parentElement.children
+                console.log(para)
+                if (para.style["-webkit-line-clamp"] == 4) {
+                    para.style["-webkit-line-clamp"] = "unset"
+                    event.target.innerText = "read less"
+                } else {
+                    para.style["-webkit-line-clamp"] = 4
+                    event.target.innerText = "read more"
+                }
+                
+            }
+        }
+    }
+</script>

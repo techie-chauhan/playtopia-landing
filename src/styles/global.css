@@ -8,6 +8,9 @@
     --swiper-theme-color: #78D4D7 !important;
     --swiper-navigation-size: 30px !important;
 }
+.hideScrollBar::-webkit-scrollbar {
+    display: none;
+  }
 * {
     /* @apply font-Quicksand */
 }
@@ -19,6 +22,9 @@ h1 {
 }
 h1 span.high {
     @apply underline decoration-4 font-normal
+}
+h1.hero {
+    @apply text-3xl
 }
 h2 {
     @apply text-3xl md:text-4xl font-normal font-Grandstander
@@ -154,6 +160,15 @@ a.ctaBtn {
 
 
 
+.activitiesSwiper .swiper-wrapper .swiper-slide {
+    @apply relative border-[3px] rounded-xl border-mYellow-400 p-5 overflow-hidden flex flex-col bg-white bg-opacity-80
+}
+.activitiesSwiper .swiper-wrapper .swiper-slide p {
+    @apply w-full
+}
+.activitiesSwiper .swiper-wrapper .swiper-slide span {
+    /* @apply self-end */
+}
 .testimonialSwiper .swiper-wrapper .swiper-slide {
     @apply relative border-[3px] rounded-md border-mPink-400 p-5 overflow-hidden flex flex-col bg-white bg-opacity-80
 }

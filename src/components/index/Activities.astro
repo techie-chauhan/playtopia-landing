@@ -1,0 +1,112 @@
+---
+const activities : {
+    title: string,
+    para: string,
+    img: string
+}[] = [
+    {
+        title: "Ball pool",
+        para: "Dive into amusements with our colourful ball pool and make a splash of memories!",
+        img: "/img/act/ball-pool.webp"
+    },
+    {
+        title: "Trampoline",
+        para: "Bounce your way to the sky and experience the joys of weightlessness!",
+        img: "/img/act/trampoline.webp"
+    },
+    {
+        title: "Donut slide",
+        para: "Take a spin on our twisty donut slide for a candy adventure!",
+        img: "/img/act/donut-slide.webp"
+    },
+    {
+        title: "Zipline",
+        para: "Soar like a chicken on our zipline and revel in the world with a new attitude!",
+        img: "/img/act/zipline.webp"
+    },
+    {
+        title: "Ball shower",
+        para: "Get showered with happiness in our playful ball bath area!",
+        img: "/img/act/ball-shower.webp"
+    },
+    {
+        title: "Projection wall",
+        para: "Step into an international area of creativeness with our interactive projection wall!",
+        img: "/img/act/projection-wall.webp"
+    },
+    {
+        title: "Pretend play",
+        para: "Let your child's imagination run wild in our whimsical pretend play place.",
+        img: "/img/act/pretend-play.webp"
+    },
+    {
+        title: "Wall climbing",
+        para: "Reach new heights and conquer our tough wall mountain climbing direction!",
+        img: "/img/act/wall-climbing.webp"
+    },
+    {
+        title: "Sand pit",
+        para: "Dig, construct, and create in our sandy oasis - a world of endless opportunities!",
+        img: "/img/act/sand-pit.webp"
+    },
+    {
+        title: "Bumper cars",
+        para: "Bump, spin, and snort your way via our interesting bumper car arena!",
+        img: "/img/act/bumper-cars.webp"
+    },
+    {
+        title: "Arcade games",
+        para: "Level up the amusing with a big selection of interesting arcade games for all ages!",
+        img: "/img/act/arcade-games.webp"
+    },
+    {
+        title: "VR games",
+        para: "Step right into a virtual reality wonderland and embark on epic adventures!",
+        img: "/img/act/vr-games.webp"
+    },
+]
+---
+<section id="testimony" class="relative w-full flex justify-center px-5 md:px-10 mt-10 md:mt-16">
+
+    <!-- container -->
+    <div class="relative w-full max-w-custom1 flex flex-col                      border-4 rounded-xl bg-white bg-opacity-70 backdrop-blur px-7">
+        
+        <!-- heading text -->
+        <div class="pt-7">
+            <span class="subheading">activities</span>
+            <h2>Discover the Fun<span class="text-mPink-400">!</span></h2>
+        </div>
+        <div class="relative w-full h-full text-center md:col-start-2 md:col-end-6 text-lg font-semibold /rounded /bg-gray-400 pb-5 md:py-10">
+            <!-- Slider main container -->
+            <div class="activitiesSwiper w-full h-full overflow-hidden">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {activities.map((item, index) => (
+                        <div class="swiper-slide relative flex-row">
+                            <div class="w-full aspect-square mb-5 overflow-hidden">
+                                <img
+                                    src={item.img}
+                                    class="w-full h-full object-cover rounded-lg"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <span class="text-xl font-Grandstander">{item.title}</span>
+                            <p class="text-sm">{item.para}</p>
+                            <button onclick="openPopUp()" class="rounded bg-mPink-400 px-4 py-1 text-white flex self-center mt-4 text-sm" >know more</button>
+                        </div>
+                    ))}
+                </div>
+                <!-- If we need pagination -->
+                <div id="tS-pagei" class="swiper-pagination "></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev -translate-x-full "></div>
+                <div class="swiper-button-next translate-x-full "></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

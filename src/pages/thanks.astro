@@ -24,4 +24,13 @@ import Layout from "../layouts/Layout.astro";
         </div>
     
     </section>
+    <script>
+        import JSConfetti from 'js-confetti'
+
+        const jsConfetti = new JSConfetti()
+
+        jsConfetti.addConfetti({
+            emojis: ['🌸'],
+        })
+    </script>
 </Layout>

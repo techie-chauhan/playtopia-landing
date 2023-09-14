@@ -9,42 +9,48 @@ import PlaytopiaCafe from '../components/index/PlaytopiaCafe.astro'
 import AmenitiesAndActivities from '../components/index/AmenitiesAndActivities.astro'
 import Testimonials from '../components/index/Testimonials.astro'
 import ContactSection from '../components/ContactSection.astro'
+import Activities from '../components/index/Activities.astro';
+import Popup from '../components/Popup.astro';
 ---
 
 <Layout title="Playtopia" description='description for playtopia' pageOgType='website' currentTab={1}>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<Hero />
 
-	<Quote text='PlayTopia is a playschool that believes in the power of play. We offer a safe and nurturing environment where children can explore, learn, and grow.'/>
+	<Quote text="Our crew of expert party planners and entertainers is devoted to creating your infant's birthday celebration. We take satisfaction in our attention to detail, dedication to safety, and our potential to carry smiles to kids' faces."/>
 	
-	<WhyUs />
+	<!-- <WhyUs /> -->
 	
 	<WhatWeOffer />
+
+  <Activities />
 	
-	<PlaytopiaCafe />
+	<!-- <PlaytopiaCafe /> -->
 	
-	<AmenitiesAndActivities />
+	<!-- <AmenitiesAndActivities /> -->
 	
-	<Quote text='A safe and nurturing environment where children can explore their imaginations and become lifelong learners.' isPurple={true}/>
+	<Quote text='A friendly, safe and learning environment where children are able to enjoy all the games' isPurple={true}/>
 
 	<Testimonials />
 
 	<ContactSection />
 
-</Layout>
-<link
-	  rel="stylesheet"
-	  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+  <Popup />
 
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</Layout>
 <script is:inline>
-	new Swiper('.HeroSwiper', {
+	  new Swiper('.HeroSwiper', {
             // Optional parameters
             loop: true,
-            autoplay: {
-                delay: 5500,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 5500,
+            //     disableOnInteraction: false,
+            // },
 
             // If we need pagination
             pagination: {
@@ -59,6 +65,36 @@ import ContactSection from '../components/ContactSection.astro'
           
             // And if we need scrollbar
     });
+    new Swiper('.activitiesSwiper', {
+            // Optional parameters
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            // slidesPerView: 1,
+            spaceBetween: 30,
+
+            // If we need pagination
+            pagination: {
+              el: '#tS-pagi',
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+        });
     new Swiper('.testimonialSwiper', {
             // Optional parameters
             // loop: true,

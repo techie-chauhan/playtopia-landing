@@ -1,0 +1,1 @@
+document.getElementById("closeMenuBtn").addEventListener("click",e=>{e.target.parentNode.parentNode.style.transform="translateY(-100%)"});document.getElementById("openMenuBtn").addEventListener("click",e=>{console.log("yo"),document.getElementById("mobileDropMenu").style.transform="translateY(0)"});
